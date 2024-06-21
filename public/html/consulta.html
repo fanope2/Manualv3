@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Formulario de consulta</title>
+     <link rel="stylesheet" href="/css/consulta.css">
+     <link rel="stylesheet" href="/css/navbar.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+          integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+     <header class="header">
+          <div class="container-nav">
+               <div class="logo">
+                    <img src="/img/logo.png" alt="logo">
+               </div>
+               <nav class="menu">
+                    <div class="head">
+                         <div class="logo"><img src="/img/logo.png" alt="logo"></div>
+                         <button type="button" class="close-menu-btn"></button>
+                    </div>
+                    <ul>
+                         <li><a href="/">Inicio</a></li>
+                         <li class="dropdown">
+                              <a href="/nosotros">Nosotros</a>
+                              <i class="fa-solid fa-chevron-down"></i>
+                              <ul class="sub-menu">
+                                   <li><a href="/historia"><span>Historia</span></a></li>
+                                   <li><a href="/mision-vision"><span>Mision y Vision</span></a></li>
+                                   <li><a href="#"><span>Autoridades</span></a></li>
+                                   <li><a href="#"><span>Profesores</span></a></li>
+                                   <li><a href="/formulario"><span>Contacto</span></a></li>
+                              </ul>
+                         </li>
+                         <li class="dropdown">
+                              <a href="#">Gestión Académica</a>
+                              <i class="fa-solid fa-chevron-down"></i>
+                              <ul class="sub-menu">
+                                   <li><a href="#"><span>Horarios<span></a></li>
+                                   <li><a href="#"><span>Calendario Académico</span></a></li>
+                                   <li><a href="#"><span>Cursos</span></a></li>
+                              </ul>
+                         </li>
+                         <li><a href="/galeria">Galería</a></li>
+                         <li><a href="/atencion">Admisión</a> </li>
+                    </ul>
+               </nav>
+               <div class="header-right">
+                    <button type="button" class="search-btn icon-btn" id="dark-mode-toggle"><i
+                              class="fa-solid fa-moon"></i></button>
+                    <button type="button" class="open-menu-btn">
+                         <span class="line line-1"></span>
+                         <span class="line line-2"></span>
+                         <span class="line line-3"></span>
+                    </button>
+               </div>
+          </div>
+     </header>
+     <div class="container">
+          <form id="miFormulario" action="/guardar" method="post">
+               <h2>Formulario de Consulta</h2>
+               <label for="nombres">Nombres:</label>
+               <input type="text" id="nombres" pattern="[a-z A-Z]+" name="nombres" title="Ingrese solo letras"
+                    placeholder="Ingrese sus nombres" required>
+
+               <label for="apellidos">Apellidos:</label>
+               <input type="text" id="apellidos" pattern="[a-z A-Z]+" name="apellidos" title="Ingrese solo letras"
+                    placeholder="Ingrese sus apellidos" required>
+
+               <label for="dni">DNI:</label>
+               <input type="text" id="dni" name="dni" pattern="[0-9]{8}"
+                    title="El número de dni tiene que tener 8 digitos" placeholder="Ingrese su DNI" required>
+
+               <label for="celular">Celular:</label>
+               <input type="tel" id="celular" name="celular" pattern="[0-9]{9}"
+                    title="Ingrese bien su número de celular" placeholder="Ingrese su número de celular" required>
+
+               <label for="email">Email:</label>
+               <input type="email" id="email" name="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+                    title="Ingrese bien su correo electronico" placeholder="Ingrese su correo " required>
+
+               <label for="asunto">Asunto:</label>
+               <input type="text" id="asunto" name="asunto" placeholder="Ingrese el asunto" required>
+
+               <label for="mensaje">Mensaje:</label>
+               <textarea id="mensaje" name="mensaje" rows="4" maxlength="100" placeholder="Escribe tu mensaje"
+                    required></textarea>
+
+               <button id="btn_guardar" type="submit">Enviar</button>
+          </form>
+     </div>
+     <script src="/js/navbar.js"></script>
+     <script src="/js/darkMode.js"></script>
+     <script src="/js/btn.js"></script>
+</body>
+
+</html>

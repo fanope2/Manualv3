@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rubik+Scribble&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Modak&display=swap');
+
+* {
+     text-decoration: none;
+     list-style: none;
+     padding: 0;
+     margin: 0;
+
+}
+
+
+:root {
+     --main-color1: #0C1B5C;
+     --main-color2: #C31C22;
+     --second-color: #394F64;
+     --font-size-header1: 1.1rem;
+     --font-style-header1: "Montserrat", sans-serif;
+     --font-style-fondo: "Modak", system-ui;
+     --font-body: "Rubik Scribble", system-ui;
+     --secondary: #1b615fb2;
+     --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+
+/*limite*/
+
+hr {
+     height: 11px;
+     background-color: var(--main-color1);
+     border-color: var(--main-color1);
+}
+
+
+
+
+#menu-btn {
+     display: none;
+}
+
+header.sticky {
+     background-color: #ffffff;
+     position: fixed;
+}
+
+/* estilo letras */
+h1 {
+     font-family: var(--font-style-header1);
+     color: var(--main-color1);
+     font-size: 2rem;
+     font-weight: 600;
+}
+
+h1 span {
+     color: var(--second-color);
+     position: relative;
+}
+
+h1 span::before {
+     content: "";
+     height: 30px;
+     width: 2px;
+     position: absolute;
+     top: 50%;
+     right: -8px;
+     background: var(--second-color);
+     transform: translateY(-45%);
+     animation: blink 0.7s infinite;
+}
+
+h1 span.stop-blinking::before {
+     animation: none;
+}
+
+@keyframes blink {
+     50% {
+          opacity: 0
+     }
+}
+
+
+
+/*FOOTER*/
+.container {
+     max-width: 2000px;
+     margin: auto;
+}
+
+.container h1 {
+     margin: auto;
+     display: flex;
+     color: #fff;
+     justify-content: center;
+
+}
+
+.footer {
+     background-color: #393d46;
+     padding: 40px 0;
+
+}
+
+.footer-row {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     margin-top: 40px;
+
+}
+
+.footer-links {
+     width: 18%;
+     padding: 0 30px;
+
+}
+
+.footer-links h4 {
+     font-size: 20px;
+     color: #ffffff;
+     margin-bottom: 25px;
+     font-weight: 500;
+     border-bottom: 3px solid var(--main-color1);
+     padding-bottom: 10px;
+     max-width: max-content;
+
+}
+
+.footer-links ul li a {
+     font-size: 18px;
+     text-decoration: none;
+     color: #ffffff;
+     display: block;
+     margin-bottom: 15px;
+     transition: all .3s ease;
+
+}
+
+
+.footer-links ul li {
+     font-size: 18px;
+     text-decoration: none;
+     color: #ffffff;
+     display: block;
+     margin-bottom: 15px;
+     transition: all .3s ease;
+
+
+}
+
+.footer-links ul li:hover {
+     color: #fff;
+     padding-left: 6px;
+}
+
+.social-link a {
+     display: inline-block;
+     min-height: 40px;
+     width: 40px;
+     background-color: var(--second-color);
+     margin: 0 10px 10px 0;
+     text-align: center;
+     line-height: 40px;
+     border-radius: 50%;
+     color: #ffffff;
+     transition: all .5s ease;
+}
+
+.social-link a:hover {
+     background-color: var(--main-color2)
+}
+
+.footer-copy {
+     background-color: var(--second-color);
+     padding: 40px;
+     text-align: center;
+}
+
+.footer-copy p {
+     color: white;
+     font-size: 16px;
+     font-family: var(--font-style-header1);
+}
+
+/*NOSOTROS*/
+.titulo-nosotros {
+     width: 100vw;
+     height: 35vh;
+     display: flex;
+     align-items: center;
+     background: url(../img/fondoRpC.jpg);
+}
+
+.tituloN-texto h1 {
+     font-size: 60px;
+     margin-left: 250px;
+}
+
+hr {
+     height: 11px;
+     background-color: var(--main-color1);
+     border-color: var(--main-color1);
+}
+
+.puntos {
+     display: flex;
+     justify-content: space-around;
+     margin-top: 130px;
+     margin-bottom: 130px;
+}
+
+.nosotros-puntos {
+     position: relative;
+     display: inline-block;
+     text-align: center;
+}
+
+
+.texto-nosotros {
+     padding-right: 30px;
+     padding-left: 30px;
+     color: rgb(255, 255, 255);
+     background-color: #033e97b9;
+     position: absolute;
+     top: 70%;
+     left: 18%;
+     transform: translate(-10%, -20%);
+
+}
+
+.texto-nosotros h2 {
+     margin: 20px;
+}
+
+.texto-nosotros p {
+     margin-bottom: 20px;
+     justify-content: center;
+     text-align: justify;
+     line-height: 1.2em;
+}
+
+
+
+
+
+/* CSS */
+.button-64 {
+     align-items: center;
+     background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
+     border: 0;
+     border-radius: 30px;
+     box-shadow: rgba(142, 51, 247, 0.2) 0 15px 20px -5px;
+     box-sizing: border-box;
+     color: #FFFFFF;
+     display: flex;
+     font-family: Phantomsans, sans-serif;
+     font-size: 14px;
+     justify-content: center;
+     line-height: 1.2em;
+     max-width: 70%;
+     min-width: 80px;
+     padding: 4px;
+     text-decoration: none;
+     user-select: none;
+     -webkit-user-select: none;
+     touch-action: manipulation;
+     white-space: nowrap;
+     cursor: pointer;
+     margin-bottom: 10px;
+}
+
+.button-64:active,
+.button-64:hover {
+     outline: 0;
+}
+
+.button-64 .span {
+     background-color: var(--main-color1);
+     padding: 10px 11px;
+     border-radius: 30px;
+     width: 80%;
+     height: 80%;
+     transition: 300ms;
+     color: white;
+}
+
+.button-64:hover .span {
+     background: none;
+}
+
+@media (min-width: 768px) {
+     .button-64 {
+          font-size: 15px;
+          min-width: 180px;
+          margin-left: 10%;
+     }
+}
+
+/*CELULAR */
+@media (max-width: 430px) {
+
+     .titulo-nosotros {
+          width: 100vw;
+          height: 35vh;
+          display: flex;
+          align-items: center;
+          background: url(../img/fondoRpC.jpg);
+     }
+
+     .tituloN-texto h1 {
+          font-size: 60px;
+          margin-left: 250px;
+     }
+
+     hr {
+          height: 11px;
+          background-color: var(--main-color1);
+          border-color: var(--main-color1);
+     }
+
+     .puntos {
+          display: flex;
+          justify-content: space-around;
+          flex-direction: column;
+          margin-top: 50px;
+          margin-bottom: 50px;
+
+     }
+
+     .nosotros-puntos {
+          position: relative;
+          display: inline-block;
+          text-align: center;
+          margin-bottom: 150px;
+     }
+
+     .nosotros-puntos img {
+          width: 100%;
+     }
+
+     .texto-nosotros {
+          padding-right: 30px;
+          padding-left: 30px;
+          color: rgb(255, 255, 255);
+          background-color: #033e97b9;
+          position: absolute;
+          top: 70%;
+          left: 18%;
+          transform: translate(-10%, -20%);
+     }
+
+     .texto-nosotros h2 {
+          margin: 20px;
+     }
+
+     .texto-nosotros p {
+          margin-bottom: 22px;
+          justify-content: center;
+          text-align: justify;
+     }
+
+     .container {
+          max-width: 2000px;
+          margin: auto;
+     }
+
+     .container h1 {
+          margin: auto;
+          display: flex;
+          color: #fff;
+          justify-content: center;
+     }
+
+     /*fOOTER*/
+     iframe {
+          width: 80%;
+          height: 290px;
+     }
+
+     .footer-row {
+          display: none;
+          display: block;
+     }
+
+     .footer-links {
+          width: 100%;
+          margin-left: 1%;
+          margin-bottom: 50px;
+     }
+
+     .footer-copy p {
+          font-size: 15px;
+     }
+
+     .button-64 {
+          font-size: 15px;
+          width: 100%;
+          min-width: 150px;
+          margin-left: 15%;
+          margin-bottom: 20px;
+     }
+
+
+
+}

@@ -1,0 +1,701 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rubik+Scribble&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Modak&display=swap');
+
+
+* {
+     text-decoration: none;
+     list-style: none;
+     padding: 0;
+     margin: 0;
+
+}
+
+
+:root {
+     --main-color1: #0C1B5C;
+     --main-color2: #C31C22;
+     --second-color: #394F64;
+     --font-size-header1: 1.1rem;
+     --font-style-header1: "Montserrat", sans-serif;
+     --font-style-fondo: "Modak", system-ui;
+     --font-body: "Rubik Scribble", system-ui;
+     --secondary: #1b615fb2;
+     --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+/*limite*/
+
+hr {
+     height: 11px;
+     background-color: var(--main-color1);
+     border-color: var(--main-color1);
+}
+
+
+
+
+#menu-btn {
+     display: none;
+}
+
+header.sticky {
+     background-color: #ffffff;
+     position: fixed;
+}
+
+/* estilo letras */
+h1 {
+     font-family: var(--font-style-header1);
+     color: var(--main-color1);
+     font-size: 2rem;
+     font-weight: 600;
+}
+
+h1 span {
+     color: var(--second-color);
+     position: relative;
+}
+
+h1 span::before {
+     content: "";
+     height: 30px;
+     width: 2px;
+     position: absolute;
+     top: 50%;
+     right: -8px;
+     background: var(--second-color);
+     transform: translateY(-45%);
+     animation: blink 0.7s infinite;
+}
+
+h1 span.stop-blinking::before {
+     animation: none;
+}
+
+@keyframes blink {
+     50% {
+          opacity: 0
+     }
+}
+
+/* MODO OSCURO */
+.dark-mode {
+     --white: #111;
+     --black: #fff;
+     --main-color1: #dbfffe;
+     --main-color2: #C31C22;
+     --second-color: #394F64;
+     background-color: var(--black);
+     color: var(--white);
+}
+
+section {
+     font-size: 30px;
+}
+
+body.dark-mode {
+     background-color: #111;
+     color: white;
+}
+
+.dark-mode .header {
+     background-color: var(--black);
+     color: var(--white);
+}
+
+.dark-mode .header .logo {
+     color: var(--main-color2);
+}
+
+.dark-mode .header .navbar1 a {
+     color: var(--white);
+}
+
+.dark-mode .header .navbar1 a:hover {
+     color: var(--main-color2);
+}
+
+.dark-mode .fondo h1 {
+     -webkit-text-stroke-color: var(--main-color2);
+}
+
+.text-animado {
+     padding: 20px;
+     border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+     box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+.text-animado span {
+     display: flex;
+     align-items: center;
+     text-align: center;
+     justify-content: center;
+}
+
+
+
+.container {
+     max-width: 100%;
+     margin: auto;
+}
+
+.container h1 {
+     margin: auto;
+     display: flex;
+     color: #fff;
+     justify-content: center;
+
+}
+
+.footer {
+     background-color: #393d46;
+     padding: 40px 0;
+
+}
+
+.footer-row {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     margin-top: 40px;
+
+}
+
+.footer-links {
+     width: 18%;
+     padding: 0 30px;
+
+}
+
+.footer-links h4 {
+     font-size: 20px;
+     color: #ffffff;
+     margin-bottom: 25px;
+     font-weight: 500;
+     border-bottom: 3px solid var(--main-color1);
+     padding-bottom: 10px;
+     max-width: max-content;
+
+}
+
+.footer-links ul li a {
+     font-size: 18px;
+     text-decoration: none;
+     color: #ffffff;
+     display: block;
+     margin-bottom: 15px;
+     transition: all .3s ease;
+
+}
+
+
+.footer-links ul li {
+     font-size: 18px;
+     text-decoration: none;
+     color: #ffffff;
+     display: block;
+     margin-bottom: 15px;
+     transition: all .3s ease;
+
+
+}
+
+.footer-links ul li:hover {
+     color: #fff;
+     padding-left: 6px;
+}
+
+.social-link a {
+     display: inline-block;
+     min-height: 40px;
+     width: 40px;
+     background-color: var(--second-color);
+     margin: 0 10px 10px 0;
+     text-align: center;
+     line-height: 40px;
+     border-radius: 50%;
+     color: #ffffff;
+     transition: all .5s ease;
+}
+
+.social-link a:hover {
+     background-color: var(--main-color2)
+}
+
+.footer-copy {
+     background-color: var(--second-color);
+     padding: 40px;
+     text-align: center;
+}
+
+.footer-copy p {
+     color: white;
+     font-size: 16px;
+     font-family: var(--font-style-header1);
+}
+
+
+
+
+/*Mision-Vision*/
+.titulo-misVis {
+     width: 100vw;
+     height: 35vh;
+     display: flex;
+     align-items: center;
+     justify-content: space-around;
+     background: url(../img/fondoRpC.jpg);
+}
+
+.misVis-texto h1 {
+     font-size: 60px;
+}
+
+.content-Misión {
+     display: flex;
+     margin: 120px;
+
+}
+
+.Misión-texto {
+     border-radius: 40px;
+     background-color: #58585850;
+     margin-top: 20px;
+     margin-left: 20px;
+     margin-right: 260px;
+}
+
+.Misión-texto h2 {
+     margin-top: 40px;
+     margin-left: 50px;
+     font-size: 50px;
+     color: var(--main-color1);
+}
+
+.Misión-texto p {
+     margin-top: 20px;
+     margin-left: 50px;
+     margin-right: 60px;
+     font-size: 20px;
+}
+
+.content-Misión img {
+     border-radius: 20px;
+     display: flex;
+     margin: 30px;
+}
+
+/*vision*/
+.content-Visión {
+     display: flex;
+     margin: 120px;
+     margin-left: 180px;
+}
+
+.Visión-texto {
+     border-radius: 40px;
+     background-color: #58585850;
+     margin-top: 20px;
+     margin-left: 250px;
+     margin-right: 20px;
+}
+
+.Visión-texto h2 {
+     margin-top: 40px;
+     margin-left: 50px;
+     font-size: 50px;
+     color: rgba(47, 114, 3, 0.966)
+}
+
+.Visión-texto p {
+     margin-top: 20px;
+     margin-left: 50px;
+     margin-right: 60px;
+     font-size: 20px;
+}
+
+.content-Visión img {
+     border-radius: 20px;
+     display: flex;
+     margin: 30px;
+
+}
+
+/*Proposito*/
+.content-Propósito {
+     display: flex;
+     margin: 120px;
+
+}
+
+.Propósito-texto {
+     border-radius: 40px;
+     background-color: #58585850;
+     margin-top: 20px;
+     margin-left: 20px;
+     margin-right: 260px;
+}
+
+.Propósito-texto h2 {
+     margin-top: 40px;
+     margin-left: 50px;
+     font-size: 50px;
+     color: var(--main-color2);
+}
+
+.Propósito-texto p {
+     margin-top: 20px;
+     margin-left: 50px;
+     margin-right: 60px;
+     font-size: 20px;
+}
+
+.content-Propósito img {
+     border-radius: 20px;
+     display: flex;
+     margin: 30px;
+}
+
+.img-misión {
+     border-radius: 30px;
+     background-color: #0c1b5cec;
+}
+
+
+
+.img-visión {
+     border-radius: 30px;
+     background-color: rgba(47, 114, 2, 0.76);
+}
+
+.img-proposito {
+     border-radius: 30px;
+     background-color: #c31c22ec;
+}
+
+
+/*IPAD*/
+@media (max-width: 1030px) {
+
+     .content-Misión {
+          margin: 20px;
+     }
+
+     .Misión-texto {
+          border-radius: 20px;
+          background-color: #58585850;
+          margin-top: 10px;
+          margin-left: 40px;
+          margin-right: 30px;
+     }
+
+     .Misión-texto h2 {
+          margin-top: 20px;
+          margin-left: 25px;
+          font-size: 25px;
+          color: var(--main-color1);
+     }
+
+     .Misión-texto p {
+          margin-top: 10px;
+          margin-left: 25px;
+          margin-right: 30px;
+          font-size: 15px;
+          line-height: 1.3em;
+     }
+
+     .content-Misión img {
+          width: 250px;
+          border-radius: 20px;
+          margin: 30px;
+     }
+
+     /*VISION-RESPONSIVE*/
+     .content-Visión {
+          margin: 20px;
+     }
+
+     .Visión-texto {
+          border-radius: 20px;
+          background-color: #58585850;
+          margin-top: 10px;
+          margin-left: 40px;
+          margin-right: 30px;
+     }
+
+     .Visión-texto h2 {
+          margin-top: 20px;
+          margin-left: 25px;
+          font-size: 25px;
+          color: var(--main-color1);
+     }
+
+     .Visión-texto p {
+          margin-top: 10px;
+          margin-left: 25px;
+          margin-right: 30px;
+          font-size: 15px;
+          line-height: 1.3em;
+     }
+
+     .content-Visión img {
+          width: 250px;
+          border-radius: 20px;
+          margin: 30px;
+     }
+
+     /*Proposito*/
+     .content-Propósito {
+          margin: 20px;
+     }
+
+     .Propósito-texto {
+          border-radius: 20px;
+          background-color: #58585850;
+          margin-top: 10px;
+          margin-left: 40px;
+          margin-right: 30px;
+     }
+
+     .Propósito-texto h2 {
+          margin-top: 20px;
+          margin-left: 25px;
+          font-size: 25px;
+          color: var(--main-color1);
+     }
+
+     .Propósito-texto p {
+          margin-top: 10px;
+          margin-left: 25px;
+          margin-right: 30px;
+          font-size: 15px;
+          line-height: 1.3em;
+     }
+
+     .content-Propósito img {
+          width: 250px;
+          border-radius: 20px;
+          margin: 30px;
+     }
+
+     /*fOOTER*/
+     iframe {
+          width: 325px;
+          height: 300px;
+     }
+
+     .footer-row {
+          display: none;
+          display: block;
+     }
+
+     .footer-links {
+          width: 100%;
+          margin-left: 50px;
+          margin-bottom: 80px;
+     }
+}
+
+
+
+
+
+
+
+/*CELULAR */
+@media (max-width: 430px) {
+
+     /*Mision-Vision*/
+     .titulo-misVis {
+          width: 100vw;
+          height: 25vh;
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          background: url(../img/fondoRpC.jpg);
+     }
+
+     .container {
+          max-width: 2000px;
+          margin: auto;
+     }
+
+     .container h1 {
+          margin: auto;
+          display: flex;
+          color: #fff;
+          justify-content: center;
+
+
+     }
+
+     .titulo-misVis h1 {
+          font-size: 220%;
+     }
+
+
+
+     .content-Misión {
+          margin: 10px;
+          flex-direction: column;
+     }
+
+     .Misión-texto {
+          border-radius: 20px;
+          background-color: #58585850;
+          margin-top: 10px;
+          margin-left: 20px;
+          margin-right: 15px;
+          margin-bottom: 30px;
+     }
+
+     .Misión-texto h2 {
+          margin-top: 20px;
+          margin-left: 25px;
+          font-size: 25px;
+          color: var(--main-color1);
+
+     }
+
+     .Misión-texto p {
+          margin-top: 10px;
+          margin-left: 25px;
+          margin-right: 30px;
+          font-size: 15px;
+          line-height: 1.2em;
+          margin-bottom: 10px;
+     }
+
+     .img-misión {
+          margin: 25px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border: 1px solid black;
+     }
+
+     .content-Misión img {
+          width: 90%;
+          border-radius: 20px;
+          margin: 20px;
+     }
+
+     /*VISION-RESPONSIVE*/
+     .content-Visión {
+          margin: 10px;
+          flex-direction: column-reverse;
+     }
+
+     .Visión-texto {
+          border-radius: 20px;
+          background-color: #58585850;
+          margin-top: 10px;
+          margin-left: 20px;
+          margin-right: 15px;
+          margin-bottom: 30px;
+     }
+
+     .Visión-texto h2 {
+          margin-top: 20px;
+          margin-left: 25px;
+          font-size: 25px;
+          color: var(--main-color1);
+     }
+
+     .Visión-texto p {
+          margin-top: 10px;
+          margin-left: 25px;
+          margin-right: 30px;
+          font-size: 15px;
+          line-height: 1.2em;
+          margin-bottom: 10px;
+     }
+
+     .img-visión {
+          margin: 25px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border: 1px solid black;
+     }
+
+     .content-Visión img {
+          width: 90%;
+          border-radius: 20px;
+          margin: 20px;
+     }
+
+     /*Proposito*/
+     .content-Propósito {
+          margin: 10px;
+          flex-direction: column;
+     }
+
+     .Propósito-texto {
+          border-radius: 20px;
+          background-color: #58585850;
+          margin-top: 10px;
+          margin-left: 20px;
+          margin-right: 15px;
+          margin-bottom: 30px;
+     }
+
+     .Propósito-texto h2 {
+          margin-top: 20px;
+          margin-left: 25px;
+          font-size: 25px;
+          color: var(--main-color1);
+     }
+
+     .Propósito-texto p {
+          margin-top: 10px;
+          margin-left: 25px;
+          margin-right: 30px;
+          font-size: 15px;
+          line-height: 1.3em;
+          margin-bottom: 10px;
+     }
+
+     .img-proposito {
+          margin: 25px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border: 1px solid black;
+
+     }
+
+
+     .content-Propósito img {
+          width: 90%;
+          border-radius: 20px;
+          margin: 20px;
+     }
+
+     /*fOOTER*/
+     iframe {
+          width: 80%;
+          height: 290px;
+     }
+
+     .footer-row {
+          display: none;
+          display: block;
+     }
+
+     .footer-links {
+          width: 100%;
+          margin-left: 1%;
+          margin-bottom: 50px;
+     }
+
+     .footer-copy p {
+          font-size: 15px;
+     }
+
+
+
+     ;
+}
